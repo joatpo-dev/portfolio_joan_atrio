@@ -80,7 +80,6 @@
 
 <div align="center" style="font-family: 'Arial', sans-serif; font-size: 20px; color: #333;">
   <p>This is a personal project, developed with the purpose of describing myself in a more technical way, hope you like it!</p>
-  <img src="https://i.imgur.com/XGphaFx.png" alt="Featured Video" style="width: 80%; max-width: 800px; height: auto;">
   <br>
   <a href="https://portfolio-joan-atrio.vercel.app/" target="_blank">
   <img src="https://img.shields.io/badge/Visit%20the%20Website-00A6A6?style=for-the-badge&logo=globe&logoColor=white" alt="Visit the Website">
