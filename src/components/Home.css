@@ -390,6 +390,9 @@
 .technology-item:hover i.fa-github {
   color: black;
 }
+.technology-item:hover i.fa-gitlab {
+  color: orange;
+}
 .technology-item:hover i.fa-python {
   color: #daaf17;
 }

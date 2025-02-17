@@ -7,7 +7,6 @@ import project2Image from "../assets/images/gamer_heaven.png";
 import { scroll, motion, useAnimation } from "framer-motion";
 
 const Home = () => {
-  const [selectedTech, setSelectedTech] = useState(null);
   const [modalOpen, setModalOpen] = useState(false);
   const controls = useAnimation();
 
@@ -38,16 +37,6 @@ const Home = () => {
       image: project2Image,
     },
   ];
-
-  const handleTechClick = (tech) => {
-    setSelectedTech(tech.toLowerCase()); // Normaliza el nombre a minúsculas
-    setModalOpen(true);
-  };
-
-  const handleCloseModal = () => {
-    setModalOpen(false);
-    setSelectedTech(null);
-  };
 
   useEffect(() => {
     if (modalOpen) {
@@ -121,67 +110,6 @@ const Home = () => {
         <circle cx="50" cy="50" r="30" className="bg" />
         <circle cx="50" cy="50" r="30" ref={progressRef} className="progress" />
       </svg>
-    );
-  };
-
-  const TechnologyModal = ({ isOpen, onClose, title }) => {
-    // useEffect debe estar siempre presente y nunca en una condición
-    useEffect(() => {
-      if (isOpen) {
-        document.body.classList.add("blur-background");
-      } else {
-        document.body.classList.remove("blur-background");
-      }
-
-      // Limpiar el efecto cuando el componente se desmonte
-      return () => {
-        document.body.classList.remove("blur-background");
-      };
-    }, [isOpen]);
-
-    // Condicional de retorno debe estar fuera del useEffect
-    if (!isOpen) return null;
-
-    // Filtra los proyectos que usan la tecnología seleccionada
-    const relatedProjects = projects.filter((project) =>
-      project.technologies.includes(title.toLowerCase())
-    );
-
-    return (
-      <motion.div
-        className={`technology-modal ${isOpen ? "open" : ""}`}
-        initial={{ opacity: 0, scale: 0.9, filter: "blur(10px)" }}
-        animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
-        exit={{ opacity: 0, scale: 0.9, filter: "blur(10px)" }}
-        transition={{ duration: 0.5 }}
-      >
-        <div className="modal-content">
-          <span className="close" onClick={onClose}>
-            &times;
-          </span>
-          <h3>{title.charAt(0).toUpperCase() + title.slice(1)}</h3>
-          <h3>Proyectos Relacionados:</h3>
-          <div className="modal-projects">
-            {relatedProjects.length > 0 ? (
-              relatedProjects.map((project, index) => (
-                <div key={index} className="modal-project-card">
-                  <h4>{project.name}</h4>
-                  <a
-                    href={project.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <img src={project.image} alt={project.name} />
-                  </a>
-                  <p>{project.description}</p>
-                </div>
-              ))
-            ) : (
-              <p>No hay proyectos relacionados para esta tecnología.</p>
-            )}
-          </div>
-        </div>
-      </motion.div>
     );
   };
 
@@ -389,50 +317,30 @@ const Home = () => {
       {/* Technologuies section */}
       <section id="technologies" className="technologies-section">
         {/* Función para llamar al modal */}
-        <TechnologyModal
-          isOpen={modalOpen}
-          onClose={handleCloseModal}
-          title={selectedTech}
-        />
 
         <h2 className="technologies-title">Tecnologías</h2>
         {/* Front End */}
         <h3 className="technologies-subtitles">Front End</h3>
         <div className="technologies-list">
-          <div
-            className="technology-item"
-            onClick={() => handleTechClick("JavaScript")}
-          >
+          <div className="technology-item">
             <i className="fab fa-js"></i>
             <span className="tech-name">JavaScript</span>
           </div>
-          <div
-            className="technology-item"
-            onClick={() => handleTechClick("React")}
-          >
+          <div className="technology-item">
             <i className="fab fa-react"></i>
             <span className="tech-name">React</span>
           </div>
-          <div
-            className="technology-item"
-            onClick={() => handleTechClick("Flutter")}
-          >
+          <div className="technology-item">
             <i className="devicon-flutter-plain"></i>
             <span className="tech-name">Flutter</span>
           </div>
 
-          <div
-            className="technology-item"
-            onClick={() => handleTechClick("HTML5")}
-          >
+          <div className="technology-item">
             <i className="fab fa-html5"></i>
             <span className="tech-name">HTML5</span>
           </div>
 
-          <div
-            className="technology-item"
-            onClick={() => handleTechClick("CSS3")}
-          >
+          <div className="technology-item">
             <i className="fab fa-css3-alt"></i>
             <span className="tech-name">CSS3</span>
           </div>
@@ -441,18 +349,12 @@ const Home = () => {
         {/* Back End */}
         <h3 className="technologies-subtitles">Back End</h3>
         <div className="technologies-list">
-          <div
-            className="technology-item"
-            onClick={() => handleTechClick("Python")}
-          >
+          <div className="technology-item">
             <i className="fab fa-python"></i>
             <span className="tech-name">Python</span>
           </div>
 
-          <div
-            className="technology-item"
-            onClick={() => handleTechClick("Java")}
-          >
+          <div className="technology-item">
             <i className="fab fa-java"></i>
             <span className="tech-name">Java</span>
           </div>
@@ -461,45 +363,26 @@ const Home = () => {
         {/* Bases de Datos */}
         <h3 className="technologies-subtitles">Bases de Datos</h3>
         <div className="technologies-list">
-          <div
-            className="technology-item"
-            onClick={() => handleTechClick("Firebase")}
-          >
+          <div className="technology-item">
             <i className="devicon-firebase-plain"></i>
             <span className="tech-name">Firebase</span>
           </div>
-          <div
-            className="technology-item"
-            onClick={() => handleTechClick("MySQL")}
-          >
+          <div className="technology-item">
             <i className="devicon-mysql-plain"></i>
             <span className="tech-name">MySQL</span>
           </div>
         </div>
 
         {/* Plataforma de Desarrollo */}
-        <h3 className="technologies-subtitles">Plataforma de Desarrollo</h3>
+        <h3 className="technologies-subtitles">Git</h3>
         <div className="technologies-list">
-          <div
-            className="technology-item"
-            onClick={() => handleTechClick("GitHub")}
-          >
+          <div className="technology-item">
             <i className="fab fa-github"></i>
             <span className="tech-name">GitHub</span>
           </div>
-          <div
-            className="technology-item"
-            onClick={() => handleTechClick("Visual Studio Code")}
-          >
-            <i className="devicon-vscode-plain"></i>
-            <span className="tech-name">Visual Studio Code</span>
-          </div>
-          <div
-            className="technology-item"
-            onClick={() => handleTechClick("Android Studio")}
-          >
-            <i className="devicon-androidstudio-plain"></i>
-            <span className="tech-name">Android Studio</span>
+          <div className="technology-item">
+            <i className="fab fa-gitlab"></i>
+            <span className="tech-name">Gitlab</span>
           </div>
         </div>
       </section>
