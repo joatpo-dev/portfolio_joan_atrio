@@ -4,39 +4,13 @@ import { Toaster, toast } from "sonner";
 import backgroundImage from "../assets/images/foto_personal.jpeg";
 import project1Image from "../assets/images/match.png";
 import project2Image from "../assets/images/gamer_heaven.png";
-import { scroll, motion, useAnimation } from "framer-motion";
+import { scroll, useAnimation } from "framer-motion";
 
 const Home = () => {
-  const [modalOpen, setModalOpen] = useState(false);
+  const [modalOpen] = useState(false);
   const controls = useAnimation();
 
   // Lista de proyectos
-  const projects = [
-    {
-      name: "Proyecto Match",
-      description:
-        "App sobre restaurante con algoritmo para mostrar los productos en base a los gustos de cada usuario...",
-      technologies: ["flutter", "firebase", "android studio", "github"],
-      link: "https://github.com/Fizzigs/proyecto_match",
-      image: project1Image,
-    },
-    {
-      name: "Proyecto GamerHeaven",
-      description:
-        "Página web sobre información de videojuegos con filtros, con gestión de usuarios...",
-      technologies: [
-        "javascript",
-        "react",
-        "html5",
-        "css3",
-        "firebase",
-        "visual studio code",
-        "github",
-      ],
-      link: "https://github.com/Fizzigs/proyecto_paginaweb_videojuegos",
-      image: project2Image,
-    },
-  ];
 
   useEffect(() => {
     if (modalOpen) {
@@ -121,7 +95,7 @@ const Home = () => {
       <section id="hero" className="hero-section">
         <div className="hero-content">
           <h1 className="hero-text">Joan Atrio</h1>
-          <h2 className="hero-subtext">Full Stack Developer</h2>
+          <h2 className="hero-subtext">Front End Software Developer</h2>
           <div className="social-icons">
             <a
               href="https://github.com/Fizzigs"
@@ -162,7 +136,7 @@ const Home = () => {
       <section id="about" className="about-section">
         <h2 className="about-title">Sobre mí</h2>
         <p>
-          Soy un desarrollador <span className="highlight">Full Stack</span> con
+          Soy un desarrollador <span className="highlight">Front End</span> con
           experiencia en frontend usando{" "}
           <span className="highlight">JavaScript</span> y{" "}
           <span className="highlight">Dart</span> junto a sus frameworks de
@@ -195,18 +169,21 @@ const Home = () => {
 
           <div className="experience-content">
             <div className="experience-header">
-              <h3 className="experience-role">Desarrollador Full Stack</h3>
+              <h3 className="experience-role">Front End Software Developer</h3>
               <span className="experience-company">Eco-Deliver</span>
             </div>
             <span className="experience-date">Octubre 2024 - Actualidad</span>
-            <p className="experience-description">
-              Desarrollo de software para optimizar la gestión de la logística
-              sostenible, tanto para nuestra empresa como para otras del sector.
-            </p>
-            <p className="experience-description">
-              Actualmente, estamos enfocados en el desarrollo de aplicaciones
-              móviles, con planes también de desarrollo web en el futuro.
-            </p>
+            <ul className="experience-description-list">
+              <li className="experience-description-item">
+                Desarrollo de software para optimizar la gestión de la logística
+                sostenible, he trabajado en el desarrollo de la interfaz de
+                usuario y la gestión de datos de una aplicación móvil.
+              </li>
+              <li className="experience-description-item">
+                Actualmente, estoy enfocado en el desarrollo de aplicaciones
+                móviles, con planes también de desarrollo web en el futuro.
+              </li>
+            </ul>
           </div>
         </div>
 
@@ -224,16 +201,18 @@ const Home = () => {
             <span className="experience-date">
               Septiembre 2022 - Marzo 2023 (6 meses)
             </span>
-            <p className="experience-description">
-              Trabaja en la resolución de tickets e incidencias en vivo, en el
-              mantenimiento de software y hardware de los equipos informáticos
-              de la infraestructura.
-            </p>
-            <p className="experience-description">
-              También en la gestión de los materiales de los almacenes y
-              implementación de instalaciones de sistemas operativos en los
-              equipos.
-            </p>
+            <ul className="experience-description-list">
+              <li className="experience-description-item">
+                Trabaja en la resolución de tickets e incidencias en vivo, en el
+                mantenimiento de software y hardware de los equipos informáticos
+                de la infraestructura.
+              </li>
+              <li className="experience-description-item">
+                También en la gestión de los materiales de los almacenes y
+                implementación de instalaciones de sistemas operativos en los
+                equipos.
+              </li>
+            </ul>
           </div>
         </div>
       </section>
