@@ -184,13 +184,12 @@
 .hero-image {
   max-width: 60%;
   border-radius: 20px;
-  height: auto;
   opacity: 0; /* Asegúrate de que comience invisible */
   animation: fadeIn 2s ease-out forwards, fadeInOut 5s infinite; /* Aplica ambas animaciones */
 }
 
 .hero-image-container {
-  max-width: 45%; /* Asegura que la imagen no ocupe más del 45% del ancho */
+  max-width: 40%;
   display: flex;
   justify-content: right;
 }
