@@ -1,7 +1,7 @@
 import "./Home.css";
 import React, { useRef, useEffect, useState } from "react";
 import { Toaster, toast } from "sonner";
-import backgroundImage from "../assets/images/foto_personal.jpeg";
+import backgroundImage from "../assets/images/foto_home_page.jpeg";
 import project1Image from "../assets/images/match.png";
 import project2Image from "../assets/images/gamer_heaven.png";
 import { scroll, useAnimation } from "framer-motion";
