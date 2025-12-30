@@ -136,23 +136,29 @@ const Home = () => {
       <section id="about" className="about-section">
         <h2 className="about-title">Sobre mí</h2>
         <p>
-          Soy un desarrollador <span className="highlight">Front End</span> con
-          experiencia en frontend usando{" "}
-          <span className="highlight">JavaScript</span> y{" "}
-          <span className="highlight">Dart</span> junto a sus frameworks de
-          desarrollo <span className="highlight">React</span> y{" "}
-          <span className="highlight">Flutter</span>, así como en backend
-          implementando <span className="highlight">Firebase</span> y{" "}
-          <span className="highlight">MySQL</span>.
+          Soy Joan, desarrollador <span className="highlight">Front End</span>{" "}
+          con experiencia en desarrollo de{" "}
+          <span className="highlight">aplicaciones móviles</span> y un sólido
+          recorrido en entornos <span className="highlight">web</span>. He
+          trabajado integrando <span className="highlight">APIs REST</span> y{" "}
+          <span className="highlight">bases de datos</span>, con especial foco
+          en la correcta comunicación entre el los sistemas , cuidando tanto la
+          estructura como la mantenibilidad del código.
         </p>
         <p>
-          He trabajado en distintos proyectos donde he desarrollado desde la
-          interfaz de usuario hasta la gestión de datos. Estos proyectos me han
-          ayudado a mejorar mi capacidad para{" "}
-          <span className="highlight">resolver problemas</span>,{" "}
-          <span className="highlight">trabajar en equipo</span> y{" "}
-          <span className="highlight">comunicarme de manera efectiva</span> con
-          otros desarrolladores.
+          Me desenvuelvo bien en la{" "}
+          <span className="highlight">integración</span> de distintos servicios
+          y en la <span className="highlight">adaptación</span> de soluciones a
+          diferentes entornos front end, priorizando siempre una implementación
+          clara, escalable y alineada con las necesidades del proyecto.
+        </p>
+        <p>
+          Actualmente continúo ampliando mis conocimientos de forma constante,
+          ya sea estudiando sobre{" "}
+          <span className="highlight">nuevos conceptos</span> de programación, o
+          bien, desarrollando{" "}
+          <span className="highlight">proyectos personales</span> que me
+          permiten profundizar en mi conocimiento.
         </p>
       </section>
 
