@@ -16,7 +16,7 @@ function App() {
       <div className="App">
         <Navbar />
         <div
-          className="content-wrapper"
+          className="content-wrapper min-h-screen w-full"
           style={{ paddingTop: `${navbarHeight}px` }}
         >
           <Routes>
