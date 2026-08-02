@@ -1,0 +1,6 @@
+# Isolates this app from any parent pnpm workspace (e.g. ~/pnpm-workspace.yaml).
+packages:
+  - "."
+
+allowBuilds:
+  esbuild: true

@@ -2,50 +2,26 @@
   "name": "portfolio_joan",
   "version": "0.1.0",
   "private": true,
+  "packageManager": "pnpm@11.12.0",
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^6.7.2",
-    "@testing-library/jest-dom": "^5.17.0",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
     "@vercel/analytics": "^1.4.1",
     "framer-motion": "^11.15.0",
-    "motion-dom": "^11.14.3",
-    "motion-utils": "^11.14.3",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^6.28.1",
-    "react-scripts": "5.0.1",
-    "sonner": "^1.7.1",
-    "styled-components": "^6.1.14",
-    "web-vitals": "^2.1.4"
+    "sonner": "^1.7.1"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+    "dev": "vite",
+    "start": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "devDependencies": {
+    "@vitejs/plugin-react": "^4.7.0",
     "autoprefixer": "^10.5.4",
     "postcss": "^8.5.25",
-    "tailwindcss": "^3.4.19"
+    "tailwindcss": "^3.4.19",
+    "vite": "^6.3.5"
   }
 }
