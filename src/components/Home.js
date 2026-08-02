@@ -1,10 +1,11 @@
 import "./Home.css";
 import React, { useRef, useEffect, useState } from "react";
 import { Toaster, toast } from "sonner";
-import backgroundImage from "../assets/images/foto_home_page.jpeg";
+import backgroundImage from "../assets/images/foto_home_page.png";
 import project1Image from "../assets/images/match.png";
 import project2Image from "../assets/images/gamer_heaven.png";
 import { scroll, useAnimation } from "framer-motion";
+import links from "../common/globals/globals";
 
 const Home = () => {
   const [modalOpen] = useState(false);
@@ -21,8 +22,7 @@ const Home = () => {
   }, [modalOpen, controls]);
 
   const handleCopyEmail = () => {
-    const email = "atriopozojoan@gmail.com"; // Reemplaza con tu correo
-    navigator.clipboard.writeText(email).then(
+    navigator.clipboard.writeText(links.email).then(
       () => {
         toast.success("¡Correo copiado al portapapeles!");
       },
@@ -98,14 +98,14 @@ const Home = () => {
           <h2 className="hero-subtext">Front End Software Developer</h2>
           <div className="social-icons">
             <a
-              href="https://github.com/Fizzigs"
+              href={links.github}
               target="_blank"
               rel="noopener noreferrer"
             >
               <i className="fab fa-github"> </i>
             </a>
             <a
-              href="https://www.linkedin.com/in/joan-atrio-pozo/"
+              href={links.linkedin}
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -115,7 +115,7 @@ const Home = () => {
               <i className="fas fa-envelope"></i>
             </button>
             <a
-              href="https://drive.google.com/file/d/1PCLk3ZMile-L5QQzhNJGUSoRk-a1tuRO/view?usp=sharing"
+              href={links.resume}
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -230,7 +230,7 @@ const Home = () => {
           <div className="project-card" data-techs="flutter firebase">
             <h3>Proyecto Match</h3>
             <a
-              href="https://github.com/Fizzigs/proyecto_match"
+              href={links.projects.match}
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -252,7 +252,7 @@ const Home = () => {
               <i className="devicon-androidstudio-plain"></i>
             </div>
             <a
-              href="https://github.com/Fizzigs/proyecto_match"
+              href={links.projects.match}
               target="_blank"
               rel="noopener noreferrer"
               className="github-link"
@@ -264,7 +264,7 @@ const Home = () => {
           <div className="project-card" data-techs="js react html css firebase">
             <h3>Proyecto GamerHeaven</h3>
             <a
-              href="https://github.com/Fizzigs/proyecto_paginaweb_videojuegos"
+              href={links.projects.gamerHeaven}
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -288,7 +288,7 @@ const Home = () => {
               <i className="devicon-vscode-plain"></i>
             </div>
             <a
-              href="https://github.com/Fizzigs/proyecto_paginaweb_videojuegos"
+              href={links.projects.gamerHeaven}
               target="_blank"
               rel="noopener noreferrer"
               className="github-link"
